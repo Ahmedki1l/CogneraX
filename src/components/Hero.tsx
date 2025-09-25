@@ -23,7 +23,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-teal)]/5 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-teal-10)] overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24%,rgba(32,178,170,0.05)_25%,rgba(32,178,170,0.05)_26%,transparent_27%,transparent_74%,rgba(32,178,170,0.05)_75%,rgba(32,178,170,0.05)_76%,transparent_77%,transparent),linear-gradient(rgba(32,178,170,0.05)_24%,transparent_25%,transparent_26%,rgba(32,178,170,0.05)_27%,rgba(32,178,170,0.05)_74%,transparent_75%,transparent_76%,rgba(32,178,170,0.05)_77%)] bg-[size:75px_75px]" />
@@ -45,22 +45,14 @@ export function Hero() {
         </div>
       ))}
 
-      {/* Interactive Cursor Glow */}
-      <div
-        className="fixed pointer-events-none z-10 w-96 h-96 rounded-full opacity-5 animate-pulse"
-        style={{
-          background: `radial-gradient(circle, var(--cognerax-teal) 0%, transparent 70%)`,
-          left: mousePosition.x - 192,
-          top: mousePosition.y - 192,
-        }}
-      />
+
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-20">
         <div className="relative py-20 sm:py-32 lg:py-40">
           <div className="lg:grid lg:grid-cols-12 lg:gap-x-12 lg:gap-y-20">
             <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
               <div className="space-y-8 animate-fade-in-up">
-                <div className="inline-flex items-center gap-2 px-4 py-2 glass border-[var(--cognerax-teal)]/30">
+                <div className="inline-flex items-center gap-2 px-4 py-2 glass border-[var(--cognerax-teal-30)]">
                   <Sparkles size={16} className="text-[var(--cognerax-teal)]" />
                   <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                     Now in Private Beta
@@ -123,26 +115,14 @@ export function Hero() {
                   </div>
 
                   {/* Orbiting Circuit Elements */}
-                  {Array.from({ length: 8 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-4 h-4 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] shadow-lg animate-spin"
-                      style={{
-                        left: "50%",
-                        top: "50%",
-                        transformOrigin: `0 ${120 + i * 15}px`,
-                        animationDuration: `${12 + i * 2}s`,
-                        animationDelay: `${i * 0.5}s`,
-                      }}
-                    />
-                  ))}
+                  
 
                   {/* Floating Tech Icons */}
                   {[
-                    { icon: Monitor, position: { top: "10%", left: "15%" } },
-                    { icon: Plug, position: { top: "20%", right: "10%" } },
-                    { icon: Brain, position: { bottom: "15%", left: "10%" } },
-                    { icon: Zap, position: { bottom: "10%", right: "20%" } },
+                    { icon: Monitor, position: { top: "5%", left: "5%" } },
+                    { icon: Plug, position: { top: "15%", right: "5%" } },
+                    { icon: Brain, position: { bottom: "20%", left: "5%" } },
+                    { icon: Zap, position: { bottom: "5%", right: "15%" } },
                   ].map(({ icon: IconComponent, position }, i) => (
                     <div
                       key={i}
@@ -153,39 +133,16 @@ export function Hero() {
                         animationDuration: `${4 + i}s`,
                       }}
                     >
-                      <IconComponent size={24} className="text-[var(--cognerax-blue)]" />
+                      <IconComponent size={20} className="text-[var(--cognerax-blue)]" />
                     </div>
                   ))}
 
                   {/* Connecting Neural Lines */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                    <defs>
-                      <linearGradient id="heroLineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="var(--cognerax-teal)" stopOpacity="0.4" />
-                        <stop offset="50%" stopColor="var(--cognerax-blue)" stopOpacity="0.6" />
-                        <stop offset="100%" stopColor="var(--cognerax-purple)" stopOpacity="0.4" />
-                      </linearGradient>
-                    </defs>
-                    {Array.from({ length: 6 }).map((_, i) => (
-                      <line
-                        key={i}
-                        x1={`${20 + i * 15}%`}
-                        y1={`${15 + i * 20}%`}
-                        x2={`${60 + i * 10}%`}
-                        y2={`${70 - i * 15}%`}
-                        stroke="url(#heroLineGradient)"
-                        strokeWidth="2"
-                        strokeDasharray="5,5"
-                        className="animate-pulse"
-                        style={{ animationDelay: `${1 + i * 0.3}s` }}
-                      />
-                    ))}
-                  </svg>
+
                 </div>
 
-                {/* Multi-layered Glow Effects */}
-                <div className="absolute -inset-6 bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] rounded-3xl opacity-20 blur-2xl animate-pulse"></div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] rounded-3xl opacity-30 blur-xl animate-pulse"></div>
+
+
               </div>
             </div>
           </div>

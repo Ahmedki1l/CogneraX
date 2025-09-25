@@ -98,7 +98,6 @@ Submitted: ${new Date().toLocaleString()}`;
     <div className={className}>
       <div className="relative glass-card overflow-hidden group">
         {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
         
         {/* Floating particles */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -205,7 +204,7 @@ Submitted: ${new Date().toLocaleString()}`;
               <SimpleButton 
                 type="submit" 
                 size="lg" 
-                className="w-full bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] hover:shadow-lg hover:shadow-[var(--cognerax-teal)]/25 text-white font-semibold relative overflow-hidden group"
+                className="w-full bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] hover:shadow-lg hover:shadow-[var(--cognerax-teal-50)] text-white font-semibold relative overflow-hidden group"
                 disabled={isSubmitting}
               >
                 <span className="relative z-10 flex items-center justify-center">
@@ -221,7 +220,7 @@ Submitted: ${new Date().toLocaleString()}`;
         </div>
         
         {/* Glow effect */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] rounded-lg opacity-20 blur-lg -z-10"></div>
+        {/* <div className="absolute -inset-1 bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] rounded-lg opacity-20 blur-lg -z-10"></div> */}
       </div>
     </div>
   );

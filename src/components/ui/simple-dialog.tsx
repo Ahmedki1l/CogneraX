@@ -82,7 +82,7 @@ export function SimpleDialogContent({ children, className = "" }: DialogContentP
       onClick={() => onOpenChange(false)}
     >
       {/* Backdrop */}
-      <div className="fixed inset-0 bg-black/50" />
+      <div className="fixed inset-0 bg-[var(--black-50)]" />
       
       {/* Content */}
       <div 

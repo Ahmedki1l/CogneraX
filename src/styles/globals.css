@@ -48,16 +48,67 @@
   --cognerax-teal: #20b2aa;
   --cognerax-blue: #1e40af;
   --cognerax-purple: #8b5cf6;
+  
+  /* CogneraX Brand Colors with Opacity */
+  --cognerax-teal-10: rgba(32, 178, 170, 0.1);
+  --cognerax-teal-20: rgba(32, 178, 170, 0.2);
+  --cognerax-teal-30: rgba(32, 178, 170, 0.3);
+  --cognerax-teal-50: rgba(32, 178, 170, 0.5);
+  
+  --cognerax-blue-10: rgba(30, 64, 175, 0.1);
+  --cognerax-blue-20: rgba(30, 64, 175, 0.2);
+  --cognerax-blue-30: rgba(30, 64, 175, 0.3);
+  --cognerax-blue-50: rgba(30, 64, 175, 0.5);
+  
+  --cognerax-purple-10: rgba(139, 92, 246, 0.1);
+  --cognerax-purple-20: rgba(139, 92, 246, 0.2);
+  --cognerax-purple-30: rgba(139, 92, 246, 0.3);
+  --cognerax-purple-50: rgba(139, 92, 246, 0.5);
   --cognerax-gradient: linear-gradient(135deg, var(--cognerax-teal) 0%, var(--cognerax-blue) 50%, var(--cognerax-purple) 100%);
   
   /* Glassmorphism Variables */
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);
+  
+  /* Common Opacity Variables */
+  --card-50: rgba(255, 255, 255, 0.5);
+  --card-30: rgba(255, 255, 255, 0.3);
+  --border-50: rgba(0, 0, 0, 0.7);
+  --border-30: rgba(0, 0, 0, 0.024);
+  --muted-50: rgba(248, 250, 252, 0.5);
+  --input-30: rgba(0, 0, 0, 0.03);
+  --input-50: rgba(0, 0, 0, 0.05);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --black-50: rgba(0, 0, 0, 0.5);
+  --primary-20: rgba(22, 33, 62, 0.2);
+  --primary-10: rgba(22, 33, 62, 0.1);
+  --destructive-20: rgba(220, 38, 38, 0.2);
+  --destructive-40: rgba(220, 38, 38, 0.4);
+  --ring-50: rgba(100, 116, 139, 0.5);
+  --border-30: rgba(0, 0, 0, 0.024);
+  --white-20: rgba(255, 255, 255, 0.2);
+  
+  /* Gradient Hover Border Variables */
+  --gradient-hover-border: linear-gradient(135deg, var(--cognerax-teal-20), var(--cognerax-blue-20), var(--cognerax-purple-20));
+  --gradient-hover-border-intense: linear-gradient(135deg, var(--cognerax-teal-30), var(--cognerax-blue-30), var(--cognerax-purple-30));
+  
+  /* Gradient Background Hover Variables */
+  --gradient-hover-bg: linear-gradient(135deg, var(--cognerax-teal-10), transparent, var(--cognerax-purple-10));
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   --glass-blur: blur(8px);
   --glass-backdrop: rgba(255, 255, 255, 0.05);
   --glass-hover-bg: rgba(255, 255, 255, 0.15);
   --glass-active-bg: rgba(255, 255, 255, 0.2);
+  
+  /* Additional Text Sizes for Typography */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
 }
 
 .dark {
@@ -144,6 +195,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* CogneraX Brand Colors */
+  --color-cognerax-teal: var(--cognerax-teal);
+  --color-cognerax-blue: var(--cognerax-blue);
+  --color-cognerax-purple: var(--cognerax-purple);
 }
 
 @layer base {
@@ -296,6 +352,72 @@ html {
   }
 }
 
+/* Gradient Hover Border Utilities */
+.gradient-hover-border {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.gradient-hover-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: var(--gradient-hover-border);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-hover-border:hover::before {
+  opacity: 1;
+}
+
+.gradient-hover-border-intense {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.gradient-hover-border-intense::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: var(--gradient-hover-border-intense);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-hover-border-intense:hover::before {
+  opacity: 1;
+}
+
+/* Gradient Background Hover Utilities */
+.gradient-hover-bg {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.gradient-hover-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hover-bg);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gradient-hover-bg:hover::after {
+  opacity: 1;
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out;
 }
@@ -305,6 +427,6 @@ html {
 }
 
 .animate-gradient {
-  background-size: 200% 200%;
+  background-size: 100% 100%;
   animation: gradient-shift 5s ease infinite;
 }

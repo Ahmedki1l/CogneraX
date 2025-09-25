@@ -1,24 +1,26 @@
+import { Brain, Target, Users, Zap } from 'lucide-react';
+
 export function About() {
   const values = [
     {
       title: 'Innovation First',
       description: 'We stay at the forefront of AI technology, constantly exploring new ways to revolutionize education.',
-      icon: '🧠'
+      icon: Brain
     },
     {
       title: 'Results Driven',
       description: 'Every solution we create is designed with measurable learning outcomes and proven educational value.',
-      icon: '🎯'
+      icon: Target
     },
     {
       title: 'Learner Focused',
       description: 'Your success is our success. We work to create personalized experiences that adapt to every learner.',
-      icon: '👥'
+      icon: Users
     },
     {
       title: 'Fast & Efficient',
       description: 'We deliver cutting-edge learning solutions that accelerate knowledge acquisition and retention.',
-      icon: '⚡'
+      icon: Zap
     },
   ];
 
@@ -72,8 +74,8 @@ export function About() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
               <div key={index} className="glass-card p-6 text-center hover:scale-105 transition-all duration-300 group">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] mb-6 group-hover:scale-110 transition-transform duration-300 text-2xl">
-                  {value.icon}
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <value.icon size={32} className="text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-foreground mb-3 bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent">
                   {value.title}

@@ -4,6 +4,7 @@ import { SimpleDialog, SimpleDialogContent, SimpleDialogHeader, SimpleDialogTitl
 import { EarlyAccessForm } from './EarlyAccessForm';
 import { navigate } from './Router';
 import cogneraXLogo from 'figma:asset/1a0665958bd51afeafab073a021c9a5023632f55.png';
+import { X, Menu } from 'lucide-react';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -96,9 +97,9 @@ export function Header() {
               className="glass-button"
             >
               {mobileMenuOpen ? (
-                <span className="text-xl">✕</span>
+                <X size={20} />
               ) : (
-                <span className="text-xl">☰</span>
+                <Menu size={20} />
               )}
             </SimpleButton>
           </div>

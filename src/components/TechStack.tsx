@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Brain, Cloud, Shield, Monitor, Globe, Database, Earth, Zap } from 'lucide-react';
+import { Card, CardContent } from './ui/card';
 
 const techCategories = [
   {
@@ -78,10 +79,8 @@ export function TechStack() {
               onMouseEnter={() => setHoveredCategory(index)}
               onMouseLeave={() => setHoveredCategory(null)}
             >
-              <div className="relative p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/50 group-hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-                
-                <div className="relative z-10">
+              <Card className="relative h-full">
+                <CardContent className="p-8 relative z-10">
                   <div
                     className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6 items-center justify-center transition-all duration-300 ${
                       hoveredCategory === index ? 'scale-110 rotate-12' : ''
@@ -113,11 +112,11 @@ export function TechStack() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </CardContent>
 
                 {/* Glow effect */}
                 <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
-              </div>
+              </Card>
             </div>
           ))}
         </div>

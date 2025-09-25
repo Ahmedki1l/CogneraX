@@ -1,10 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+import { Shield, BarChart3, Settings, Eye, Users, Calendar, CheckCircle, Mail, Phone, Globe, AlertTriangle, Target, Zap, X, Cookie } from 'lucide-react';
 
 export function CookiePolicy() {
   const cookieTypes = [
     {
-      icon: '🛡️',
+      icon: Shield,
       title: 'Essential Cookies',
       description: 'Required for basic website functionality',
       purposes: [
@@ -19,7 +20,7 @@ export function CookiePolicy() {
       color: 'from-[var(--cognerax-teal)] to-[var(--cognerax-blue)]'
     },
     {
-      icon: '📊',
+      icon: BarChart3,
       title: 'Analytics Cookies',
       description: 'Help us understand how visitors use our website',
       purposes: [
@@ -34,7 +35,7 @@ export function CookiePolicy() {
       color: 'from-[var(--cognerax-blue)] to-[var(--cognerax-purple)]'
     },
     {
-      icon: '🎯',
+      icon: Target,
       title: 'Marketing Cookies',
       description: 'Used to deliver relevant advertisements',
       purposes: [
@@ -49,7 +50,7 @@ export function CookiePolicy() {
       color: 'from-[var(--cognerax-purple)] to-[var(--cognerax-teal)]'
     },
     {
-      icon: '⚙️',
+      icon: Settings,
       title: 'Preference Cookies',
       description: 'Remember your settings and preferences',
       purposes: [
@@ -87,7 +88,7 @@ export function CookiePolicy() {
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-purple)]/20 mb-8">
-              <span className="text-sm">🍪</span>
+              <Cookie size={16} className="text-[var(--cognerax-purple)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                 Cookie Management
               </span>
@@ -107,11 +108,11 @@ export function CookiePolicy() {
 
             <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <span className="text-lg">📅</span>
+                <Calendar size={20} className="text-[var(--cognerax-purple)]" />
                 <span>Last Updated: {lastUpdated}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-lg text-[var(--cognerax-purple)]">✅</span>
+                <CheckCircle size={20} className="text-[var(--cognerax-purple)]" />
                 <span>GDPR Compliant</span>
               </div>
             </div>
@@ -122,7 +123,7 @@ export function CookiePolicy() {
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-purple)]/20 mb-6">
-              <span className="text-sm">👁️</span>
+              <Eye size={16} className="text-[var(--cognerax-purple)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                 Cookie Categories
               </span>
@@ -147,14 +148,13 @@ export function CookiePolicy() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-purple)]/30 transition-all duration-500 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-purple)]/5 via-transparent to-[var(--cognerax-teal)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative ">
                   
                   <CardContent className="p-8 relative z-10">
                     <div className="flex items-start justify-between mb-6">
                       <div className="flex items-center space-x-4">
-                        <div className={`p-3 rounded-xl bg-gradient-to-r ${type.color} text-2xl items-center justify-center flex transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
-                          {type.icon}
+                        <div className={`p-3 rounded-xl bg-gradient-to-r ${type.color} items-center justify-center flex transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
+                          <type.icon size={24} className="text-white" />
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-foreground group-hover:text-[var(--cognerax-purple)] transition-colors duration-300">
@@ -171,12 +171,12 @@ export function CookiePolicy() {
                         </div>
                         {type.canDisable ? (
                           <div className="flex items-center space-x-2 text-sm">
-                            <span className="text-lg text-green-500">✅</span>
+                            <CheckCircle size={20} className="text-green-500" />
                             <span className="text-green-600">Optional</span>
                           </div>
                         ) : (
                           <div className="flex items-center space-x-2 text-sm">
-                            <span className="text-lg text-orange-500">❌</span>
+                            <X size={20} className="text-orange-500" />
                             <span className="text-orange-600">Required</span>
                           </div>
                         )}
@@ -206,7 +206,7 @@ export function CookiePolicy() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-purple)]/20 mb-6">
-                <span className="text-sm">👥</span>
+                <Users size={16} className="text-[var(--cognerax-purple)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                   Third-Party Services
                 </span>
@@ -225,7 +225,7 @@ export function CookiePolicy() {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <Card className="">
                 <CardContent className="p-8">
                   <div className="space-y-6">
                     {thirdPartyServices.map((service, index) => (
@@ -239,7 +239,7 @@ export function CookiePolicy() {
                           <p className="text-sm text-muted-foreground">{service.purpose}</p>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <span className="text-lg text-[var(--cognerax-purple)]">⚡</span>
+                          <Zap size={20} className="text-[var(--cognerax-purple)]" />
                           <span className="text-sm text-[var(--cognerax-purple)]">Active</span>
                         </div>
                       </div>
@@ -257,7 +257,7 @@ export function CookiePolicy() {
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-purple)]/20">
-                  <span className="text-sm">⚙️</span>
+                  <Settings size={16} className="text-[var(--cognerax-purple)]" />
                   <span className="text-sm bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                     Your Control
                   </span>
@@ -287,7 +287,7 @@ export function CookiePolicy() {
                   className="w-full bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] hover:opacity-90 text-white font-semibold" 
                   size="lg"
                 >
-                  <span className="mr-2">⚙️</span>
+                  <Settings size={16} className="mr-2" />
                   Manage Cookie Preferences
                 </Button>
                 <Button 
@@ -295,18 +295,18 @@ export function CookiePolicy() {
                   className="w-full border-[var(--cognerax-purple)] text-[var(--cognerax-purple)] hover:bg-[var(--cognerax-purple)]/10" 
                   size="lg"
                 >
-                  <span className="mr-2">👁️</span>
+                  <Eye size={16} className="mr-2" />
                   View Current Settings
                 </Button>
               </div>
             </div>
 
             <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <Card className="">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">
                     <div className="p-2 rounded-lg bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 text-xl">
-                      🛡️
+                      <Shield size={20} className="text-[var(--cognerax-purple)]" />
                     </div>
                     <span>Browser Controls</span>
                   </CardTitle>
@@ -319,15 +319,15 @@ export function CookiePolicy() {
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-start space-x-2">
-                        <span className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0">✅</span>
+                        <CheckCircle size={16} className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0" />
                         <span>Block all cookies from specific websites</span>
                       </li>
                       <li className="flex items-start space-x-2">
-                        <span className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0">✅</span>
+                        <CheckCircle size={16} className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0" />
                         <span>Delete existing cookies from your device</span>
                       </li>
                       <li className="flex items-start space-x-2">
-                        <span className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0">✅</span>
+                        <CheckCircle size={16} className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0" />
                         <span>Set browser to ask before accepting cookies</span>
                       </li>
                     </ul>
@@ -339,7 +339,7 @@ export function CookiePolicy() {
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="p-2 rounded-lg bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] text-xl">
-                      ⚠️
+                      <AlertTriangle size={20} className="text-yellow-500" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">Impact Notice</h4>
@@ -359,7 +359,7 @@ export function CookiePolicy() {
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-purple)]/20 mb-6">
-              <span className="text-sm">📧</span>
+              <Mail size={16} className="text-[var(--cognerax-purple)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                 Cookie Questions?
               </span>
@@ -376,24 +376,24 @@ export function CookiePolicy() {
               Our team is available to help you understand and manage your cookie preferences.
             </p>
 
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 max-w-lg mx-auto">
+            <Card className=" max-w-lg mx-auto">
               <CardContent className="p-8">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <div className="p-2 rounded-lg bg-[var(--cognerax-purple)]/10 text-xl">
-                      📧
+                      <Mail size={20} className="text-[var(--cognerax-purple)]" />
                     </div>
                     <span>cookies@cognerax.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <div className="p-2 rounded-lg bg-[var(--cognerax-blue)]/10 text-xl">
-                      📞
+                      <Phone size={20} className="text-[var(--cognerax-purple)]" />
                     </div>
                     <span>+20 155 661 7918</span>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <div className="p-2 rounded-lg bg-[var(--cognerax-teal)]/10 text-xl">
-                      🌍
+                      <Globe size={20} className="text-[var(--cognerax-teal)]" />
                     </div>
                     <span>Cairo, Egypt</span>
                   </div>

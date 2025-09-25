@@ -1,9 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { BookOpen, Users, Shield, Scale, Scale as ScaleIcon, Calendar, CheckCircle, Settings, Mail, Phone, Globe, AlertTriangle } from 'lucide-react';
 
 export function TermsOfService() {
   const sections = [
     {
-      icon: '📖',
+      icon: BookOpen,
       title: 'Service Description',
       content: [
         'CogneraX Learn provides AI-powered educational platform services',
@@ -14,7 +15,7 @@ export function TermsOfService() {
       ]
     },
     {
-      icon: '👥',
+      icon: Users,
       title: 'User Accounts',
       content: [
         'Users must provide accurate and current information',
@@ -25,7 +26,7 @@ export function TermsOfService() {
       ]
     },
     {
-      icon: '🛡️',
+      icon: Shield,
       title: 'Acceptable Use',
       content: [
         'Use services only for lawful educational purposes',
@@ -47,7 +48,7 @@ export function TermsOfService() {
       ]
     },
     {
-      icon: '⚖️',
+      icon: Scale,
       title: 'Intellectual Property',
       content: [
         'CogneraX retains ownership of the platform and AI technology',
@@ -58,7 +59,7 @@ export function TermsOfService() {
       ]
     },
     {
-      icon: '⚖️',
+      icon: ScaleIcon,
       title: 'Limitation of Liability',
       content: [
         'Services are provided "as is" without warranties',
@@ -73,7 +74,7 @@ export function TermsOfService() {
   const lastUpdated = 'December 2024';
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-blue)]/5 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-blue-10)] overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24%,rgba(30,64,175,0.05)_25%,rgba(30,64,175,0.05)_26%,transparent_27%,transparent_74%,rgba(30,64,175,0.05)_75%,rgba(30,64,175,0.05)_76%,transparent_77%,transparent),linear-gradient(rgba(30,64,175,0.05)_24%,transparent_25%,transparent_26%,rgba(30,64,175,0.05)_27%,rgba(30,64,175,0.05)_74%,transparent_75%,transparent_76%,rgba(30,64,175,0.05)_77%)] bg-[size:75px_75px]" />
@@ -83,8 +84,8 @@ export function TermsOfService() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-blue)]/20 mb-8">
-              <span className="text-sm">⚖️</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-blue-20)] mb-8">
+              <Scale size={16} className="text-[var(--cognerax-blue)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Legal Framework
               </span>
@@ -104,11 +105,11 @@ export function TermsOfService() {
 
             <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <span className="text-lg">📅</span>
+                <Calendar size={20} className="text-[var(--cognerax-blue)]" />
                 <span>Effective Date: {lastUpdated}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-lg text-[var(--cognerax-blue)]">✅</span>
+                <CheckCircle size={20} className="text-[var(--cognerax-blue)]" />
                 <span>Legally Binding</span>
               </div>
             </div>
@@ -124,14 +125,13 @@ export function TermsOfService() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-blue)]/30 transition-all duration-500 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-blue)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full ">
                   
                   <CardHeader className="relative z-10">
                     <CardTitle className="flex items-center space-x-3">
-                      <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] text-2xl items-center justify-center flex transition-transform duration-300 hover:scale-110 hover:rotate-6">
-                        {section.icon}
-                      </div>
+                    <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] items-center justify-center flex transition-transform duration-300 hover:scale-110 hover:rotate-6">
+                      <section.icon size={24} className="text-white" />
+                    </div>
                       <span className="text-xl group-hover:text-[var(--cognerax-blue)] transition-colors duration-300">
                         {section.title}
                       </span>
@@ -163,8 +163,8 @@ export function TermsOfService() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8 animate-fade-in-up">
                 <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-blue)]/20">
-                    <span className="text-sm">⚙️</span>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-blue-20)]">
+                    <Settings size={16} className="text-[var(--cognerax-blue)]" />
                     <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                       Terms Management
                     </span>
@@ -191,12 +191,12 @@ export function TermsOfService() {
               </div>
 
               <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+                <Card className="">
                   <CardContent className="p-8">
                     <div className="space-y-6">
                       <div className="flex items-center space-x-3">
                         <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] text-2xl">
-                          ⚖️
+                          <Scale size={24} className="text-white" />
                         </div>
                         <h3 className="text-xl font-bold text-foreground">Governing Law</h3>
                       </div>
@@ -207,7 +207,7 @@ export function TermsOfService() {
                           resolved through binding arbitration in Cairo, Egypt.
                         </p>
                         
-                        <div className="p-4 rounded-lg bg-[var(--cognerax-blue)]/10 border border-[var(--cognerax-blue)]/20">
+                        <div className="p-4 rounded-lg bg-[var(--cognerax-blue)]/10 border border-[var(--cognerax-blue-20)]">
                           <p className="text-sm">
                             For institutional clients, specific terms may be negotiated through 
                             separate service agreements that supersede these general terms.
@@ -225,8 +225,8 @@ export function TermsOfService() {
         {/* Contact Information */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-blue)]/20 mb-6">
-              <span className="text-sm">📧</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-blue-20)] mb-6">
+              <Mail size={16} className="text-[var(--cognerax-blue)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Legal Questions?
               </span>
@@ -244,24 +244,24 @@ export function TermsOfService() {
               and assistance.
             </p>
 
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 max-w-lg mx-auto">
+            <Card className=" max-w-lg mx-auto">
               <CardContent className="p-8">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <div className="p-2 rounded-lg bg-[var(--cognerax-blue)]/10 text-xl">
-                      📧
+                      <Mail size={20} className="text-[var(--cognerax-blue)]" />
                     </div>
                     <span>legal@cognerax.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <div className="p-2 rounded-lg bg-[var(--cognerax-purple)]/10 text-xl">
-                      📞
+                      <Phone size={20} className="text-[var(--cognerax-teal)]" />
                     </div>
                     <span>+20 155 661 7918</span>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
                     <div className="p-2 rounded-lg bg-[var(--cognerax-teal)]/10 text-xl">
-                      🌍
+                      <Globe size={20} className="text-[var(--cognerax-teal)]" />
                     </div>
                     <span>Cairo, Egypt</span>
                   </div>
@@ -274,11 +274,11 @@ export function TermsOfService() {
         {/* Acceptance Notice */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="animate-fade-in-up">
-            <Card className="bg-gradient-to-r from-[var(--cognerax-blue)]/10 via-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 border-[var(--cognerax-blue)]/20">
+            <Card className="bg-gradient-to-r from-[var(--cognerax-blue)]/10 via-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 border-[var(--cognerax-blue-20)]">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] text-2xl">
-                    ⚠️
+                    <AlertTriangle size={24} className="text-yellow-500" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">Agreement Acceptance</h3>

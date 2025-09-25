@@ -1,10 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import { Lock, Key, Monitor, Eye, Shield, Users, Cloud, Zap, Target, Calendar, CheckCircle, Settings, Mail, Globe, AlertTriangle, Database, FileText, Phone } from 'lucide-react';
 
 export function Security() {
   const securityMeasures = [
     {
-      icon: '🔒',
+      icon: Lock,
       title: 'Data Encryption',
       description: 'End-to-end encryption for all data in transit and at rest',
       features: [
@@ -17,7 +18,7 @@ export function Security() {
       color: 'from-[var(--cognerax-teal)] to-[var(--cognerax-blue)]'
     },
     {
-      icon: '🔑',
+      icon: Key,
       title: 'Access Control',
       description: 'Multi-factor authentication and role-based permissions',
       features: [
@@ -30,7 +31,7 @@ export function Security() {
       color: 'from-[var(--cognerax-blue)] to-[var(--cognerax-purple)]'
     },
     {
-      icon: '🖥️',
+      icon: Monitor,
       title: 'Infrastructure Security',
       description: 'Enterprise-grade cloud infrastructure with redundancy',
       features: [
@@ -43,7 +44,7 @@ export function Security() {
       color: 'from-[var(--cognerax-purple)] to-[var(--cognerax-teal)]'
     },
     {
-      icon: '👁️',
+      icon: Eye,
       title: 'Monitoring & Detection',
       description: 'Real-time threat detection and security monitoring',
       features: [
@@ -85,18 +86,18 @@ export function Security() {
   ];
 
   const securityFeatures = [
-    { icon: '💾', title: 'Data Residency', description: 'Choose where your data is stored and processed' },
-    { icon: '👥', title: 'User Privacy', description: 'Granular privacy controls for all user data' },
-    { icon: '📋', title: 'Audit Trails', description: 'Complete audit logs for all system activities' },
-    { icon: '☁️', title: 'Secure Backups', description: 'Encrypted, geographically distributed backups' },
-    { icon: '⚡', title: 'Incident Response', description: 'Rapid response to security incidents and threats' },
-    { icon: '🎯', title: 'Vulnerability Management', description: 'Regular security assessments and patching' }
+    { icon: Database, title: 'Data Residency', description: 'Choose where your data is stored and processed' },
+    { icon: Users, title: 'User Privacy', description: 'Granular privacy controls for all user data' },
+    { icon: FileText, title: 'Audit Trails', description: 'Complete audit logs for all system activities' },
+    { icon: Cloud, title: 'Secure Backups', description: 'Encrypted, geographically distributed backups' },
+    { icon: Zap, title: 'Incident Response', description: 'Rapid response to security incidents and threats' },
+    { icon: Target, title: 'Vulnerability Management', description: 'Regular security assessments and patching' }
   ];
 
   const lastUpdated = 'December 2024';
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-blue)]/5 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-blue-10)] overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24%,rgba(30,64,175,0.05)_25%,rgba(30,64,175,0.05)_26%,transparent_27%,transparent_74%,rgba(30,64,175,0.05)_75%,rgba(30,64,175,0.05)_76%,transparent_77%,transparent),linear-gradient(rgba(30,64,175,0.05)_24%,transparent_25%,transparent_26%,rgba(30,64,175,0.05)_27%,rgba(30,64,175,0.05)_74%,transparent_75%,transparent_76%,rgba(30,64,175,0.05)_77%)] bg-[size:75px_75px]" />
@@ -106,8 +107,8 @@ export function Security() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-blue)]/20 mb-8">
-              <span className="text-sm">🛡️</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-teal-10)] border border-[var(--cognerax-blue-20)] mb-8">
+              <Shield size={16} className="text-[var(--cognerax-blue)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                 Enterprise Security
               </span>
@@ -127,11 +128,11 @@ export function Security() {
 
             <div className="flex items-center justify-center space-x-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <span className="text-lg">📅</span>
+                <Calendar size={20} className="text-[var(--cognerax-blue)]" />
                 <span>Last Updated: {lastUpdated}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-lg text-[var(--cognerax-blue)]">✅</span>
+                <CheckCircle size={20} className="text-[var(--cognerax-blue)]" />
                 <span>Bank-Grade Security</span>
               </div>
             </div>
@@ -141,8 +142,8 @@ export function Security() {
         {/* Security Measures */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-blue)]/20 mb-6">
-              <span className="text-sm">🔒</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-teal-10)] border border-[var(--cognerax-blue-20)] mb-6">
+              <Lock size={16} className="text-[var(--cognerax-blue)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                 Protection Layers
               </span>
@@ -167,13 +168,12 @@ export function Security() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-blue)]/30 transition-all duration-500 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-blue)]/5 via-transparent to-[var(--cognerax-teal)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full ">
                   
                   <CardHeader className="relative z-10">
                     <CardTitle className="flex items-center space-x-3">
-                      <div className={`p-3 rounded-xl bg-gradient-to-r ${measure.color} text-2xl items-center justify-center flex transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
-                        {measure.icon}
+                      <div className={`p-3 rounded-xl bg-gradient-to-r ${measure.color} items-center justify-center flex transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
+                        <measure.icon size={24} className="text-white" />
                       </div>
                       <div>
                         <span className="text-xl group-hover:text-[var(--cognerax-blue)] transition-colors duration-300">
@@ -190,7 +190,7 @@ export function Security() {
                     <div className="space-y-3">
                       {measure.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-start space-x-3">
-                          <span className="text-[var(--cognerax-blue)] mt-0.5 flex-shrink-0">✅</span>
+                          <CheckCircle size={16} className="text-[var(--cognerax-blue)] mt-0.5 flex-shrink-0" />
                           <span className="text-muted-foreground leading-relaxed">{feature}</span>
                         </div>
                       ))}
@@ -206,11 +206,11 @@ export function Security() {
         </section>
 
         {/* Compliance Standards */}
-        <section className="relative py-24 bg-gradient-to-b from-[var(--cognerax-blue)]/5 to-background">
+        <section className="relative py-24 bg-gradient-to-b from-[var(--cognerax-blue-10)] to-background">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-blue)]/20 mb-6">
-                <span className="text-sm">📋</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-teal-10)] border border-[var(--cognerax-blue-20)] mb-6">
+                <FileText size={16} className="text-[var(--cognerax-blue)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                   Industry Standards
                 </span>
@@ -235,13 +235,12 @@ export function Security() {
                   className="group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-blue)]/30 transition-all duration-500 overflow-hidden text-center">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-blue)]/5 via-transparent to-[var(--cognerax-teal)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="relative h-full  text-center">
                     
                     <CardContent className="p-8 relative z-10">
                       <div className="space-y-4">
                         <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] w-fit mx-auto text-2xl">
-                          📋
+                          <FileText size={20} className="text-[var(--cognerax-blue)]" />
                         </div>
                         
                         <h3 className="text-xl font-bold text-foreground group-hover:text-[var(--cognerax-blue)] transition-colors duration-300">
@@ -270,8 +269,8 @@ export function Security() {
         {/* Security Features Grid */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-blue)]/20 mb-6">
-              <span className="text-sm">⚙️</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-teal-10)] border border-[var(--cognerax-blue-20)] mb-6">
+              <Settings size={16} className="text-[var(--cognerax-blue)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                 Additional Features
               </span>
@@ -296,12 +295,11 @@ export function Security() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-blue)]/30 transition-all duration-500 overflow-hidden text-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-blue)]/5 via-transparent to-[var(--cognerax-teal)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full  text-center">
                   
                   <CardContent className="p-8 relative z-10">
-                    <div className="p-4 rounded-2xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] w-fit mx-auto mb-6 text-3xl transition-transform duration-300 hover:scale-110 hover:rotate-6">
-                      {feature.icon}
+                    <div className="p-4 rounded-2xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] w-fit mx-auto mb-6 transition-transform duration-300 hover:scale-110 hover:rotate-6">
+                      <feature.icon size={32} className="text-white" />
                     </div>
 
                     <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-[var(--cognerax-blue)] transition-colors duration-300">
@@ -324,8 +322,8 @@ export function Security() {
         {/* Security Contact */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-teal)]/10 border border-[var(--cognerax-blue)]/20 mb-6">
-              <span className="text-sm">📧</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-teal-10)] border border-[var(--cognerax-blue-20)] mb-6">
+              <Mail size={16} className="text-[var(--cognerax-blue)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] bg-clip-text text-transparent font-medium">
                 Security Inquiries
               </span>
@@ -343,24 +341,24 @@ export function Security() {
               about our security practices.
             </p>
 
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50 max-w-lg mx-auto">
+            <Card className=" max-w-lg mx-auto">
               <CardContent className="p-8">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-muted-foreground">
-                    <div className="p-2 rounded-lg bg-[var(--cognerax-blue)]/10 text-xl">
-                      📧
+                    <div className="p-2 rounded-lg bg-[var(--cognerax-blue-10)] text-xl">
+                      <Mail size={20} className="text-[var(--cognerax-blue)]" />
                     </div>
                     <span>security@cognerax.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
-                    <div className="p-2 rounded-lg bg-[var(--cognerax-teal)]/10 text-xl">
-                      📞
+                    <div className="p-2 rounded-lg bg-[var(--cognerax-teal-10)] text-xl">
+                      <Phone size={20} className="text-[var(--cognerax-purple)]" />
                     </div>
                     <span>+20 155 661 7918</span>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground">
-                    <div className="p-2 rounded-lg bg-[var(--cognerax-purple)]/10 text-xl">
-                      🌍
+                    <div className="p-2 rounded-lg bg-[var(--cognerax-purple-10)] text-xl">
+                      <Globe size={20} className="text-[var(--cognerax-purple)]" />
                     </div>
                     <span>Cairo, Egypt</span>
                   </div>
@@ -373,11 +371,11 @@ export function Security() {
         {/* Security Notice */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="animate-fade-in-up">
-            <Card className="bg-gradient-to-r from-[var(--cognerax-blue)]/10 via-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border-[var(--cognerax-blue)]/20">
+            <Card className="bg-gradient-to-r from-[var(--cognerax-blue-10)] via-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border-[var(--cognerax-blue-20)]">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-teal)] text-2xl">
-                    ⚠️
+                    <AlertTriangle size={24} className="text-yellow-500" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">Responsible Disclosure</h3>

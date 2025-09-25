@@ -1,32 +1,33 @@
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { EarlyAccessForm } from '../components/EarlyAccessForm';
+import { Mail, Phone, MapPin, Calendar, GraduationCap, Building, Users, MessageSquare, Sparkles, Shield, Clock, Globe, Zap, CheckCircle } from 'lucide-react';
 
 export function Contact() {
   const contactInfo = [
     {
-      icon: '📧',
+      icon: Mail,
       title: 'Email Us',
       details: ['ceo@cognerax.com', 'info@cognerax.com'],
       description: 'Get in touch for general inquiries and early access',
       color: 'from-[var(--cognerax-teal)] to-[var(--cognerax-blue)]',
     },
     {
-      icon: '📞',
+      icon: Phone,
       title: 'Phone Support',
       details: ['+20 155 661 7918', 'Available for inquiries'],
       description: 'Speak directly with our team',
       color: 'from-[var(--cognerax-blue)] to-[var(--cognerax-purple)]',
     },
     {
-      icon: '📍',
+      icon: MapPin,
       title: 'Location',
       details: ['Cairo, Egypt', 'Founded September 2025'],
       description: 'Our headquarters and founding location',
       color: 'from-[var(--cognerax-purple)] to-[var(--cognerax-teal)]',
     },
     {
-      icon: '📅',
+      icon: Calendar,
       title: 'Schedule Demo',
       details: ['Private beta access', 'Personalized walkthrough'],
       description: 'Book a demo to see CogneraX Learn in action',
@@ -36,19 +37,19 @@ export function Contact() {
 
   const inquiryTypes = [
     {
-      icon: '🎓',
+      icon: GraduationCap,
       title: 'Educational Institutions',
       description: 'Schools, universities, and educational organizations',
       color: 'from-[var(--cognerax-teal)] to-[var(--cognerax-blue)]',
     },
     {
-      icon: '🏢',
+      icon: Building,
       title: 'Corporate Training',
       description: 'Companies looking for employee training solutions',
       color: 'from-[var(--cognerax-blue)] to-[var(--cognerax-purple)]',
     },
     {
-      icon: '👥',
+      icon: Users,
       title: 'Individual Educators',
       description: 'Teachers and independent educators',
       color: 'from-[var(--cognerax-purple)] to-[var(--cognerax-teal)]',
@@ -86,7 +87,7 @@ export function Contact() {
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-8">
-              <span className="text-sm">💬</span>
+              <MessageSquare size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Connect with CogneraX
               </span>
@@ -115,12 +116,11 @@ export function Contact() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden text-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full text-center">
                   
                   <CardContent className="p-8 relative z-10">
-                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${info.color} mb-6 text-3xl items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
-                      {info.icon}
+                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${info.color} mb-6 items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
+                      <info.icon size={32} className="text-white" />
                     </div>
 
                     <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-[var(--cognerax-teal)] transition-colors duration-300">
@@ -152,7 +152,7 @@ export function Contact() {
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-12 animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
-              <span className="text-sm">✨</span>
+              <Sparkles size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Join the Future of Learning
               </span>
@@ -180,7 +180,7 @@ export function Contact() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
-                <span className="text-sm">👥</span>
+                <Users size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Who We Serve
                 </span>
@@ -205,12 +205,11 @@ export function Contact() {
                   className="group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="relative h-full ">
                     
                     <CardContent className="p-8 relative z-10 text-center">
-                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${type.color} mb-6 text-3xl items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
-                        {type.icon}
+                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${type.color} mb-6 items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
+                        <type.icon size={32} className="text-white" />
                       </div>
 
                       <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-[var(--cognerax-teal)] transition-colors duration-300">
@@ -237,7 +236,7 @@ export function Contact() {
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20">
-                  <span className="text-sm">🛡️</span>
+                  <Shield size={16} className="text-[var(--cognerax-teal)]" />
                   <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                     Premium Support
                   </span>
@@ -258,18 +257,18 @@ export function Contact() {
 
               <div className="space-y-6">
                 {[
-                  { icon: '🕒', label: '24/7 Support', desc: 'Round-the-clock assistance via chat and email' },
-                  { icon: '📞', label: 'Priority Phone Support', desc: 'Direct access to our expert team' },
-                  { icon: '🌍', label: 'Global Coverage', desc: 'Support in multiple languages and time zones' },
-                  { icon: '⚡', label: 'Fast Response', desc: 'Average response time under 2 hours' }
+                  { icon: Clock, label: '24/7 Support', desc: 'Round-the-clock assistance via chat and email' },
+                  { icon: Phone, label: 'Priority Phone Support', desc: 'Direct access to our expert team' },
+                  { icon: Globe, label: 'Global Coverage', desc: 'Support in multiple languages and time zones' },
+                  { icon: Zap, label: 'Fast Response', desc: 'Average response time under 2 hours' }
                 ].map((feature, index) => (
                   <div
                     key={index}
                     className="flex items-start space-x-4 animate-fade-in-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-blue)]/10 text-xl">
-                      {feature.icon}
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-blue)]/10">
+                      <feature.icon size={20} className="text-[var(--cognerax-teal)]" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">{feature.label}</h4>
@@ -287,8 +286,8 @@ export function Contact() {
                 
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-xl bg-white/10 backdrop-blur-sm text-2xl">
-                      📅
+                    <div className="p-3 rounded-xl bg-[var(--white-10)] backdrop-blur-sm text-2xl">
+                      <Calendar size={20} className="text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold mb-3">Schedule a Demo</h3>
@@ -311,11 +310,11 @@ export function Contact() {
               </Card>
 
               {/* Support Hours Card */}
-              <Card className="bg-card/50 backdrop-blur-sm">
+              <Card className="bg-[var(--card-50)] backdrop-blur-sm">
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 text-2xl">
-                      🕒
+                      <Clock size={20} className="text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-foreground mb-4">Support Hours</h3>
@@ -346,7 +345,7 @@ export function Contact() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
-                <span className="text-sm">💬</span>
+                <MessageSquare size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Frequently Asked Questions
                 </span>
@@ -371,12 +370,11 @@ export function Contact() {
                   className="group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="relative h-full ">
                     
                     <CardContent className="p-8 relative z-10">
                       <div className="flex items-start space-x-3 mb-4">
-                        <span className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0">✅</span>
+                        <CheckCircle size={16} className="text-[var(--cognerax-teal)] mt-0.5 flex-shrink-0" />
                         <h3 className="text-xl font-bold text-foreground group-hover:text-[var(--cognerax-teal)] transition-colors duration-300">
                           {faq.question}
                         </h3>

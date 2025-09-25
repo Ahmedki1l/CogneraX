@@ -103,7 +103,7 @@ export function Products() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-teal)]/5 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-teal-10)] overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24%,rgba(32,178,170,0.05)_25%,rgba(32,178,170,0.05)_26%,transparent_27%,transparent_74%,rgba(32,178,170,0.05)_75%,rgba(32,178,170,0.05)_76%,transparent_77%,transparent),linear-gradient(rgba(32,178,170,0.05)_24%,transparent_25%,transparent_26%,rgba(32,178,170,0.05)_27%,rgba(32,178,170,0.05)_74%,transparent_75%,transparent_76%,rgba(32,178,170,0.05)_77%)] bg-[size:75px_75px]" />
@@ -113,7 +113,7 @@ export function Products() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <Rocket size={18} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Private Beta • AI-Powered Education Platform
@@ -136,7 +136,7 @@ export function Products() {
               <div className="transition-transform duration-200 hover:scale-105 active:scale-95">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] hover:shadow-lg hover:shadow-[var(--cognerax-teal)]/25 text-white font-semibold px-8 py-6 text-lg group" 
+                  className="bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] hover:shadow-lg hover:shadow-[var(--cognerax-teal-50)] text-white font-semibold px-8 py-6 text-lg group" 
                   onClick={() => navigate('/contact')}
                 >
                   Request Early Access
@@ -148,7 +148,7 @@ export function Products() {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-2 border-[var(--cognerax-teal)] text-[var(--cognerax-teal)] hover:bg-[var(--cognerax-teal)]/10 px-8 py-6 text-lg backdrop-blur-sm" 
+                  className="border-2 border-[var(--cognerax-teal)] text-[var(--cognerax-teal)] hover:bg-[var(--cognerax-teal-10)] px-8 py-6 text-lg backdrop-blur-sm" 
                   onClick={() => navigate('/contact')}
                 >
                   Schedule Demo
@@ -195,7 +195,7 @@ export function Products() {
         {/* Core Features */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
               <Zap size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Core Features
@@ -221,8 +221,7 @@ export function Products() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full ">
                   
                   <CardHeader className="relative z-10">
                     <div className="flex items-center space-x-4 mb-4">
@@ -263,7 +262,7 @@ export function Products() {
         <section className="relative py-24 bg-gradient-to-b from-[var(--cognerax-teal)]/5 to-background">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
                 <Users size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Specialized Sections
@@ -289,8 +288,7 @@ export function Products() {
                   className="group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden text-center">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="relative h-full  text-center">
                     
                     <CardContent className="p-8 relative z-10">
                       <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-r ${audience.color} mb-6 items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
@@ -327,7 +325,7 @@ export function Products() {
         {/* Value Proposition */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
               <Target size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Value for Everyone
@@ -353,8 +351,7 @@ export function Products() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full ">
                   
                   <CardContent className="p-8 relative z-10">
                     <div className="flex items-start space-x-4">

@@ -236,8 +236,7 @@ export function Features() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden text-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full  text-center">
                   
                   <CardContent className="p-8 relative z-10">
                     <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${metric.color} mb-6 items-center justify-center hover:scale-110 hover:rotate-6 transition-transform duration-300`}>
@@ -295,8 +294,7 @@ export function Features() {
                   className="group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="relative h-full ">
                     
                     <CardContent className="p-8 relative z-10">
                       <div className="flex items-center space-x-4 mb-6">
@@ -358,8 +356,8 @@ export function Features() {
                   className="relative group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 transition-all duration-500 ${
-                    activeStep === index ? 'border-[var(--cognerax-teal)]/50 shadow-lg' : 'hover:border-[var(--cognerax-teal)]/30'
+                  <div className={`p-8 rounded-2xl  transition-all duration-500 ${
+                    activeStep === index ? 'border-[var(--cognerax-teal)]/50 shadow-lg' : 'hover:border-[var(--cognerax-teal-30)]'
                   }`}>
                     <div className="flex items-center space-x-4 mb-4">
                       <div className="relative">
@@ -423,8 +421,7 @@ export function Features() {
                   className="group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden text-center">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="relative h-full  text-center">
                     
                     <CardContent className="p-8 relative z-10">
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${spec.color} mb-6 items-center justify-center hover:scale-110 hover:rotate-6 transition-transform duration-300`}>
@@ -518,7 +515,7 @@ export function Features() {
 
             <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="relative aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--cognerax-teal)]/20 via-[var(--cognerax-blue)]/20 to-[var(--cognerax-purple)]/20 backdrop-blur-3xl border border-white/10 shadow-2xl">
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--cognerax-teal-20)] via-[var(--cognerax-blue-20)] to-[var(--cognerax-purple-20)] backdrop-blur-3xl border border-[var(--white-10)] shadow-2xl">
                   <ImageWithFallback
                     src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGZlYXR1cmVzJTIwZWR1Y2F0aW9uJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NTg2NDI2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                     alt="AI Features Technology"
@@ -550,7 +547,7 @@ export function Features() {
 
         {/* Call to Action */}
         <section className="relative py-24 bg-gradient-to-br from-[var(--cognerax-teal)]/10 via-[var(--cognerax-blue)]/10 to-[var(--cognerax-purple)]/10">
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--cognerax-teal-10)] via-transparent to-[var(--cognerax-purple-10)]"></div>
           
           <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
             <div className="space-y-8 animate-fade-in-up">

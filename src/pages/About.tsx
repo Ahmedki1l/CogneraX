@@ -78,7 +78,7 @@ export function About() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-teal)]/5 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-background via-background to-[var(--cognerax-teal-10)] overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_24%,rgba(32,178,170,0.05)_25%,rgba(32,178,170,0.05)_26%,transparent_27%,transparent_74%,rgba(32,178,170,0.05)_75%,rgba(32,178,170,0.05)_76%,transparent_77%,transparent),linear-gradient(rgba(32,178,170,0.05)_24%,transparent_25%,transparent_26%,rgba(32,178,170,0.05)_27%,rgba(32,178,170,0.05)_74%,transparent_75%,transparent_76%,rgba(32,178,170,0.05)_77%)] bg-[size:75px_75px]" />
@@ -88,7 +88,7 @@ export function About() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-8">
               <Building2 size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Founded September 2025
@@ -112,7 +112,7 @@ export function About() {
               {companyStats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/30 transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
+                  className="text-center p-4 rounded-2xl bg-[var(--card-50)] backdrop-blur-sm border border-[var(--border-30)] transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
                 >
                   <stat.icon size={24} className="mb-2 text-[var(--cognerax-teal)]" />
                   <div className="text-lg font-bold bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent">
@@ -130,7 +130,7 @@ export function About() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-blue)]/10 border border-[var(--cognerax-teal)]/20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-blue-10)] border border-[var(--cognerax-teal-20)]">
                   <Target size={16} className="text-[var(--cognerax-teal)]" />
                   <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] bg-clip-text text-transparent font-medium">
                     Our Mission
@@ -154,7 +154,7 @@ export function About() {
 
             <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-blue)]/20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-blue-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-blue-20)]">
                   <Users size={16} className="text-[var(--cognerax-blue)]" />
                   <span className="text-sm bg-gradient-to-r from-[var(--cognerax-blue)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                     Our Team
@@ -181,10 +181,10 @@ export function About() {
         </section>
 
         {/* Product Ecosystem */}
-        <section className="relative py-24 bg-gradient-to-b from-[var(--cognerax-teal)]/5 to-background">
+        <section className="relative py-24 bg-gradient-to-b from-[var(--cognerax-teal-10)] to-background">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
                 <Briefcase size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Product Ecosystem
@@ -211,8 +211,7 @@ export function About() {
                   className="group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="relative h-full ">
                     
                     <CardContent className="p-8 relative z-10 text-center">
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${product.color} mb-6 items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
@@ -231,7 +230,7 @@ export function About() {
                         <span className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ${
                           product.status === 'Private Beta' 
                             ? 'bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] text-white' 
-                            : 'bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-blue)]/10 text-[var(--cognerax-purple)] border border-[var(--cognerax-purple)]/20'
+                            : 'bg-gradient-to-r from-[var(--cognerax-purple-10)] to-[var(--cognerax-blue-10)] text-[var(--cognerax-purple)] border border-[var(--cognerax-purple-20)]'
                         }`}>
                           {product.status}
                         </span>
@@ -250,7 +249,7 @@ export function About() {
         {/* Values */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
               <Sparkles size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Our Values
@@ -276,8 +275,7 @@ export function About() {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card className="relative h-full bg-card/50 backdrop-blur-sm border-border/50 hover:border-[var(--cognerax-teal)]/30 transition-all duration-500 overflow-hidden text-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--cognerax-teal)]/5 via-transparent to-[var(--cognerax-purple)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <Card className="relative h-full  text-center">
                   
                   <CardContent className="p-8 relative z-10">
                     <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${value.color} mb-6 text-white items-center justify-center transition-transform duration-300 hover:scale-110 hover:rotate-6`}>
@@ -302,12 +300,12 @@ export function About() {
         </section>
 
         {/* Company Story */}
-        <section className="relative py-24 bg-gradient-to-b from-background to-[var(--cognerax-teal)]/5">
+        <section className="relative py-24 bg-gradient-to-b from-background to-[var(--cognerax-teal-10)]">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24 items-center">
               <div className="space-y-8 animate-fade-in-up">
                 <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)]">
                     <Calendar size={16} className="text-[var(--cognerax-teal)]" />
                     <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                       Our Journey
@@ -342,7 +340,7 @@ export function About() {
 
               <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <div className="relative aspect-square max-w-lg mx-auto">
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--cognerax-teal)]/20 via-[var(--cognerax-blue)]/20 to-[var(--cognerax-purple)]/20 backdrop-blur-3xl border border-white/10 shadow-2xl">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--cognerax-teal-20)] via-[var(--cognerax-blue-20)] to-[var(--cognerax-purple-20)] backdrop-blur-3xl border border-[var(--white-10)] shadow-2xl">
                     <ImageWithFallback
                       src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3klMjBkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NTg2NDI0NzV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                       alt="AI Technology Dashboard"
@@ -354,7 +352,7 @@ export function About() {
                   {[Brain, Globe, TrendingUp].map((IconComponent, i) => (
                     <div
                       key={i}
-                      className="absolute w-16 h-16 rounded-2xl bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] backdrop-blur-sm border border-white/20 flex items-center justify-center animate-float"
+                      className="absolute w-16 h-16 rounded-2xl bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] backdrop-blur-sm border border-[var(--white-20)] flex items-center justify-center animate-float"
                       style={{
                         left: `${20 + i * 25}%`,
                         top: `${15 + i * 30}%`,

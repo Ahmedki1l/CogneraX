@@ -49,6 +49,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // CogneraX Brand Colors
+        cognerax: {
+          teal: "var(--cognerax-teal)",
+          blue: "var(--cognerax-blue)", 
+          purple: "var(--cognerax-purple)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

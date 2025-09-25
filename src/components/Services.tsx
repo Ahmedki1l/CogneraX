@@ -51,7 +51,7 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-16 sm:py-24 bg-muted/50">
+    <section id="services" className="py-16 sm:py-24 bg-[var(--muted-50)]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -68,7 +68,7 @@ export function Services() {
             <Card key={index} className="group hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <div className="flex items-center space-x-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--primary-10)] group-hover:bg-[var(--primary-10)] transition-colors duration-300">
                     <service.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>

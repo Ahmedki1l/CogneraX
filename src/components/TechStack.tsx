@@ -50,7 +50,7 @@ export function TechStack() {
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
             <Monitor size={16} className="text-[var(--cognerax-teal)]" />
             <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
               Advanced Technology Stack
@@ -114,6 +114,10 @@ export function TechStack() {
                   </div>
                 </CardContent>
 
+                
+                {/* Animated border */}
+                <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+                
                 {/* Glow effect */}
                 <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
               </Card>
@@ -134,7 +138,7 @@ export function TechStack() {
           ].map((metric, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-border/30 transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
+              className="group relative h-full flex flex-col justify-center text-center p-6 rounded-2xl backdrop-blur-sm transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
             >
               <div className="flex justify-center mb-3">
                 <metric.icon size={32} className="text-[var(--cognerax-teal)]" />
@@ -143,8 +147,16 @@ export function TechStack() {
                 {metric.value}
               </div>
               <div className="text-sm text-muted-foreground">{metric.label}</div>
+
+              {/* Animated border */}
+              <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10"></div>
+            
             </div>
           ))}
+          
         </div>
       </div>
     </section>

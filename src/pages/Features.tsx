@@ -206,7 +206,7 @@ export function Features() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-8">
               <Zap size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Advanced AI Features
@@ -254,6 +254,8 @@ export function Features() {
                       {metric.description}
                     </p>
                   </CardContent>
+                  {/* Animated border */}
+                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
 
                   {/* Glow effect */}
                   <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${metric.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
@@ -267,7 +269,7 @@ export function Features() {
         <section className="relative py-24 bg-gradient-to-b from-[var(--cognerax-teal)]/5 to-background">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
                 <Cpu size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Comprehensive Features
@@ -316,6 +318,9 @@ export function Features() {
                       </div>
                     </CardContent>
 
+                    {/* Animated border */}
+                    <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                     {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
                   </Card>
@@ -328,7 +333,7 @@ export function Features() {
         {/* How It Works */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
               <GitBranch size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Workflow Process
@@ -356,6 +361,12 @@ export function Features() {
                   className="relative group animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
+                  {/* Animated border */}
+                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10"></div>
+
                   <div className={`p-8 rounded-2xl  transition-all duration-500 ${
                     activeStep === index ? 'border-[var(--cognerax-teal)]/50 shadow-lg' : 'hover:border-[var(--cognerax-teal-30)]'
                   }`}>
@@ -395,7 +406,7 @@ export function Features() {
         <section className="relative py-24 bg-gradient-to-b from-background to-[var(--cognerax-teal)]/5">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
                 <Shield size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Technical Excellence
@@ -436,6 +447,9 @@ export function Features() {
                       </p>
                     </CardContent>
 
+                    {/* Animated border */}
+                    <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                     {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${spec.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
                   </Card>
@@ -450,7 +464,7 @@ export function Features() {
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)]">
                   <Brain size={16} className="text-[var(--cognerax-teal)]" />
                   <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                     Advanced Capabilities
@@ -512,36 +526,7 @@ export function Features() {
                 </Button>
               </div>
             </div>
-
-            <div className="relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="relative aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--cognerax-teal-20)] via-[var(--cognerax-blue-20)] to-[var(--cognerax-purple-20)] backdrop-blur-3xl border border-[var(--white-10)] shadow-2xl">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGZlYXR1cmVzJTIwZWR1Y2F0aW9uJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NTg2NDI2MDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="AI Features Technology"
-                    className="w-full h-full object-cover rounded-3xl mix-blend-overlay"
-                  />
-                </div>
-
-                {/* Floating Feature Icons */}
-                {[Brain, ClipboardCheck, BarChart3, Shield].map((IconComponent, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-16 h-16 rounded-2xl bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-blue)] backdrop-blur-sm border border-white/20 flex items-center justify-center animate-float"
-                    style={{
-                      top: i === 0 ? '10%' : i === 1 ? '70%' : i === 2 ? '20%' : '80%',
-                      left: i === 0 ? '80%' : i === 1 ? '85%' : i === 2 ? '10%' : '5%',
-                      animationDelay: `${i * 0.5}s`
-                    }}
-                  >
-                    <IconComponent size={24} className="text-white" />
-                  </div>
-                ))}
-
-                {/* Abstract decorative elements */}
-                <div className="absolute -inset-6 bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] rounded-full opacity-10 blur-3xl animate-pulse"></div>
-              </div>
-            </div>
+           
           </div>
         </section>
 
@@ -551,7 +536,7 @@ export function Features() {
           
           <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
             <div className="space-y-8 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/20 to-[var(--cognerax-purple)]/20 border border-[var(--cognerax-teal)]/30 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-20)] to-[var(--cognerax-purple-20)] border border-[var(--cognerax-teal-30)] mb-6">
                 <Rocket size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Join the Beta Program
@@ -586,7 +571,7 @@ export function Features() {
                   <Button 
                     variant="outline" 
                     size="lg" 
-                    className="border-[var(--cognerax-teal)] text-[var(--cognerax-teal)] hover:bg-[var(--cognerax-teal)] hover:text-white font-semibold px-8 group" 
+                    className="border-[var(--cognerax-teal)] text-[var(--cognerax-teal)] hover:bg-[var(--cognerax-teal)] font-semibold px-8 group" 
                     onClick={() => navigate('/about')}
                   >
                     Learn More

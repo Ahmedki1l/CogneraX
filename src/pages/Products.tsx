@@ -250,6 +250,10 @@ export function Products() {
                     </div>
                   </CardContent>
 
+                  
+                  {/* Animated border */}
+                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                   {/* Glow effect */}
                   <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
                 </Card>
@@ -313,6 +317,10 @@ export function Products() {
                       </div>
                     </CardContent>
 
+                    
+                    {/* Animated border */}
+                    <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                     {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${audience.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
                   </Card>
@@ -369,6 +377,9 @@ export function Products() {
                     </div>
                   </CardContent>
 
+                  {/* Animated border */}
+                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                   {/* Glow effect */}
                   <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${prop.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
                 </Card>
@@ -399,10 +410,11 @@ export function Products() {
                 <div className="transition-transform duration-200 hover:scale-105 active:scale-95">
                   <Button 
                     size="lg" 
-                    className="bg-white text-[var(--cognerax-blue)] hover:bg-gray-100 font-semibold px-8 py-6 text-lg shadow-lg" 
+                    className="bg-gradient-to-r from-white/20 to-white/10 text-white hover:from-white/30 hover:to-white/20 hover:shadow-xl hover:shadow-white/25 font-semibold px-8 py-6 text-lg shadow-lg backdrop-blur-sm border border-white/20 group" 
                     onClick={() => navigate('/contact')}
                   >
                     Request Early Access
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </Button>
                 </div>
                 
@@ -410,10 +422,11 @@ export function Products() {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-2 border-white text-white hover:bg-white hover:text-[var(--cognerax-blue)] backdrop-blur-sm px-8 py-6 text-lg" 
+                    className="border-2 border-white text-white hover:text-[var(--cognerax-blue)] hover:shadow-xl hover:shadow-white/25 backdrop-blur-sm px-8 py-6 text-lg group" 
                     onClick={() => navigate('/contact')}
                   >
                     Contact Us
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
                   </Button>
                 </div>
               </div>

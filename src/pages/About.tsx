@@ -112,13 +112,19 @@ export function About() {
               {companyStats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 rounded-2xl bg-[var(--card-50)] backdrop-blur-sm border border-[var(--border-30)] transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
-                >
+                  className="group relative h-full flex flex-col justify-center text-center p-6 rounded-2xl backdrop-blur-sm transition-transform duration-300 hover:scale-105 hover:-translate-y-1"
+                  >
                   <stat.icon size={24} className="mb-2 text-[var(--cognerax-teal)]" />
                   <div className="text-lg font-bold bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent">
                     {stat.value}
                   </div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  
+                  {/* Animated border */}
+                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10"></div>
                 </div>
               ))}
             </div>
@@ -237,8 +243,13 @@ export function About() {
                       </div>
                     </CardContent>
 
+                    
+                    {/* Animated border */}
+                    <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                     {/* Glow effect */}
-                    <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${product.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10"></div>
+
                   </Card>
                 </div>
               ))}
@@ -291,8 +302,13 @@ export function About() {
                     </p>
                   </CardContent>
 
+                  
+                  {/* Animated border */}
+                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                   {/* Glow effect */}
-                  <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${value.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10"></div>
+
                 </Card>
               </div>
             ))}

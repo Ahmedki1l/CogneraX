@@ -86,7 +86,7 @@ export function Contact() {
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-8">
               <MessageSquare size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Connect with CogneraX
@@ -140,6 +140,9 @@ export function Contact() {
                     </div>
                   </CardContent>
 
+                  {/* Animated border */}
+                  <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                   {/* Glow effect */}
                   <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${info.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
                 </Card>
@@ -151,7 +154,7 @@ export function Contact() {
         {/* Early Access Form Section */}
         <section className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-12 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
               <Sparkles size={16} className="text-[var(--cognerax-teal)]" />
               <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                 Join the Future of Learning
@@ -179,7 +182,7 @@ export function Contact() {
         <section className="relative py-24 bg-gradient-to-b from-[var(--cognerax-teal)]/5 to-background">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
                 <Users size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Who We Serve
@@ -221,6 +224,9 @@ export function Contact() {
                       </p>
                     </CardContent>
 
+                    {/* Animated border */}
+                    <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                     {/* Glow effect */}
                     <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${type.color} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10`}></div>
                   </Card>
@@ -235,7 +241,7 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)]">
                   <Shield size={16} className="text-[var(--cognerax-teal)]" />
                   <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                     Premium Support
@@ -267,7 +273,7 @@ export function Contact() {
                     className="flex items-start space-x-4 animate-fade-in-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-blue)]/10">
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-blue-10)]">
                       <feature.icon size={20} className="text-[var(--cognerax-teal)]" />
                     </div>
                     <div>
@@ -282,6 +288,9 @@ export function Contact() {
             <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {/* Quick Demo Card */}
               <Card className="relative bg-gradient-to-r from-[var(--cognerax-teal)] via-[var(--cognerax-blue)] to-[var(--cognerax-purple)] text-white overflow-hidden">
+                {/* Animated border */}
+                <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                 <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_35%,rgba(255,255,255,0.1)_36%,rgba(255,255,255,0.1)_45%,transparent_46%)] bg-[size:20px_20px] animate-pulse"></div>
                 
                 <CardContent className="p-8 relative z-10">
@@ -297,7 +306,7 @@ export function Contact() {
                       </p>
                       <div className="transition-transform duration-200 hover:scale-105 active:scale-95">
                         <Button 
-                          className="bg-white text-[var(--cognerax-blue)] hover:bg-gray-100 font-semibold"
+                          className="bg-gradient-to-r from-white/20 to-white/10 text-white hover:from-white/30 hover:to-white/20 hover:shadow-xl hover:shadow-white/25 font-semibold px-8 py-6 text-lg shadow-lg backdrop-blur-sm border border-white/20 group" 
                           size="lg"
                         >
                           Book Demo Now
@@ -311,9 +320,12 @@ export function Contact() {
 
               {/* Support Hours Card */}
               <Card className="bg-[var(--card-50)] backdrop-blur-sm">
+                {/* Animated border */}
+                <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
+
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-purple)]/10 to-[var(--cognerax-teal)]/10 text-2xl">
+                    <div className="p-3 rounded-xl bg-gradient-to-r from-[var(--cognerax-purple)] to-[var(--cognerax-teal)] text-2xl">
                       <Clock size={20} className="text-white" />
                     </div>
                     <div>
@@ -344,7 +356,7 @@ export function Contact() {
         <section className="relative py-24 bg-gradient-to-b from-background to-[var(--cognerax-teal)]/5">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center mb-16 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal)]/10 to-[var(--cognerax-purple)]/10 border border-[var(--cognerax-teal)]/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--cognerax-teal-10)] to-[var(--cognerax-purple-10)] border border-[var(--cognerax-teal-20)] mb-6">
                 <MessageSquare size={16} className="text-[var(--cognerax-teal)]" />
                 <span className="text-sm bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] bg-clip-text text-transparent font-medium">
                   Frequently Asked Questions
@@ -383,6 +395,9 @@ export function Contact() {
                         {faq.answer}
                       </p>
                     </CardContent>
+
+                    {/* Animated border */}
+                    <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-[var(--cognerax-teal-20)] transition-all duration-500"></div>
 
                     {/* Glow effect */}
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[var(--cognerax-teal)] to-[var(--cognerax-purple)] opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500 -z-10"></div>
